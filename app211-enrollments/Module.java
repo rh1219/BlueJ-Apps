@@ -8,7 +8,9 @@
 public class Module
 {
     // instance variables - replace the example below with your own
-    private int x;
+    private String code;
+    private String title;
+    private int credits;
 
     /**
      * Constructor for objects of class Module
