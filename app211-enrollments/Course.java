@@ -38,6 +38,8 @@ public class Course
         
         System.out.println(" Course Code: " + code + ": " + title);
         System.out.println();
+        
+        module.print();
     }
     
     /**
@@ -49,5 +51,10 @@ public class Course
         System.out.println("   App211: Course Details");
         System.out.println(" --------------------------------");
         System.out.println();
+    }
+    
+    public void addModule(Module module)
+    {
+        this.module = module;
     }
 }

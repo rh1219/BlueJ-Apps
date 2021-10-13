@@ -1,6 +1,7 @@
 
 /**
- * Write a description of class Module here.
+ * This class respresents the course model and contains information 
+ * on the module title and code.
  *
  * @author Rahaat Hussain
  * @version 2 01/10/2021
@@ -56,14 +57,15 @@ public class Module
     }
     
      /**
-     * Print the details of the course, the list
-     * of students enrolled and the module
+     * Print the details of the module, the code
+     * and credits.
      */
     public void print()
     {
         //printHeading();
         
-        System.out.println(" Module Code: " + code + ": " + title);
+        System.out.println(" Module Code: " + code + ": " 
+                            + title + ": " + " Credit " + credit);
         System.out.println();
     }
 }
