@@ -1,7 +1,7 @@
 
 /**
- * This class respresents the course model and contains information 
- * on the module title and code.
+ * This class respresents the Module and contains information 
+ * on the module title, code and credits.
  *
  * @author Rahaat Hussain
  * @version 2 01/10/2021
@@ -14,7 +14,7 @@ public class Module
     private int credit;
 
     /**
-     * Constructor for objects of class Module
+     * Create a Module with code, title and credit. 
      */
     public Module(String code, String title)
     {
@@ -25,10 +25,7 @@ public class Module
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  
-     * @return code
+     * Return the code of the module.
      */
     public String getCode()
     {
@@ -36,21 +33,24 @@ public class Module
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  
-     * @return code
+     * Return the title of the module.
      */
     public String getTitle()
     {
         return this.title;
     }
     
+    /**
+     * Return the credits of the module.
+     */
     public int getCredit()
     {
         return this.credit;
     }
     
+    /**
+     * Set the value of the credits.
+     */
     public void setCredit(int credit)
     {
         this.credit = credit;
