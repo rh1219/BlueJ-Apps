@@ -4,7 +4,8 @@ import java.util.ArrayList;
  * that enrolled students may want to complete
  *
  * @author Derek Peacock and Nicholas Day
- * @version 0.1 11/Sep/2020
+ * Modified by Rahaat Hussain
+ * @version 2.0
  */
 public class Course
 {
@@ -19,7 +20,7 @@ public class Course
      
     public Course()
     {
-        this("G400", "BSc Computing");
+        this("BT1CTG1", "BSc Computing");
     }
     
     /**
@@ -89,6 +90,9 @@ public class Course
      */
     public void printModules()
     {
-        System.out.println();
+        for (Module module : modules)
+        {
+            module.print();
+    }
     }
 }

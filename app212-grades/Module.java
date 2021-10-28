@@ -4,7 +4,8 @@
  * pass the module with a mark of 40+
  *
  * @author Derek Peacock and Nicholas Day
- * @version 1.0 17/07/2021
+ * Modified by Rahaat Hussain
+ * @version 2.0
  */
 public class Module
 {

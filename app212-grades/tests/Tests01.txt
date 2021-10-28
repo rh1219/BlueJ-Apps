@@ -1,0 +1,63 @@
+Student student1 = new Student("Rahaat Hussain", 22045458);
+Student student1 = new Student("Rahaat Hussain", 22045458);
+Course computing = new Course("BT1CTG1", "BSc Computing");
+student1.enrol(computing);
+student1.printCourse();
+ Student ID: 22045458, Rahaat Hussain
+
+ Course BT1CTG1: BSc Computing
+
+Module co452 = new Module("CO452", "Programming Concepts");
+computing.addModule(co452);
+computing.print();
+
+ Course BT1CTG1: BSc Computing
+
+computing.printModules();
+
+Student rahaat = new Student("Rahaat Hussain", 22045458);
+Course computing = new Course("BT1CTG1", "BSc Computing");
+Module co452 = new Module("CO452", "Programming Concepts");
+Student bob = new Student("Bob", 1234567);
+ModuleMark rahaatModuleMark = new ModuleMark(co452);
+ModuleMark bobModuleMark = new ModuleMark(co452);
+rahaatModuleMark.setMark(80);
+bobModuleMark.setMark(50);
+rahaat.addMark(rahaatModuleMark);
+rahaat.printTranscript();
+ ------------------------------------
+ App21-02: Exam Board Transcript 2021
+        by student name
+ ------------------------------------
+ Student ID: 22045458, Rahaat Hussain
+    Exception occurred.
+rahaat.printTranscript();
+ ------------------------------------
+ App21-02: Exam Board Transcript 2021
+        by student name
+ ------------------------------------
+ Student ID: 22045458, Rahaat Hussain
+    Exception occurred.
+bob.addMark(bobModuleMark);
+Student rahaat = new Student("Rahaat Hussain", 22045458);
+Course computing = new Course("BT1CTG1", "BSc Computing");
+Module co452 = new Module("CO452", "Programming Concepts");
+computing.addModule(co452);
+rahaat.enrol(computing);
+rahaat.printTranscript();
+ ------------------------------------
+ App21-02: Exam Board Transcript 2021
+        by student name
+ ------------------------------------
+ Student ID: 22045458, Rahaat Hussain
+
+ Course BT1CTG1: BSc Computing
+
+ CO452: 	Programming Concepts
+
+ ---- 	 -------------------- 	 ------	 ---- 	 -----
+ Code 	 Module 		Credit	 Mark 	 Grade
+ ---- 	 -------------------- 	 ------	 ---- 	 -----
+
+
+ No Final Course Grade Yet!
