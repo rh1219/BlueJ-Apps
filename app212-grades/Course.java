@@ -93,6 +93,7 @@ public class Course
         for (Module module : modules)
         {
             module.print();
+            module.printCredit();
     }
     }
 }

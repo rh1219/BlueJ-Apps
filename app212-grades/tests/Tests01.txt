@@ -61,3 +61,77 @@ rahaat.printTranscript();
 
 
  No Final Course Grade Yet!
+Student student1 = new Student("Rahaat Hussain", 22045458);
+Course computing = new Course("BT1CTG1", "BSc Computing");
+Module co452 = new Module("CO452", "Programming Concepts");
+student1.enrol(computing);
+computing.addModule(co452);
+student1.printTranscript();
+ ------------------------------------
+ App21-02: Exam Board Transcript 2021
+        by student name
+ ------------------------------------
+ Student ID: 22045458, Rahaat Hussain
+
+ Course BT1CTG1: BSc Computing
+
+ CO452: 	Programming Concepts	  15 credits
+
+ ---- 	 -------------------- 	 ------	 ---- 	 -----
+ Code 	 Module 		Credit	 Mark 	 Grade
+ ---- 	 -------------------- 	 ------	 ---- 	 -----
+
+
+ No Final Course Grade Yet!
+Student student1 = new Student("Rahaat Hussain", 22045458);
+Course computing = new Course("BT1CTG1", "BSc Computing");
+Module co452 = new Module("CO452", "Programming Concepts");
+computing.addModule(co452);
+student1.enrol(computing);
+ModuleMark rahaatMark = new ModuleMark(co452);
+rahaatMark.setMark(90);
+student1.addMark(rahaatMark);
+student1.printTranscript();
+ ------------------------------------
+ App21-02: Exam Board Transcript 2021
+        by student name
+ ------------------------------------
+ Student ID: 22045458, Rahaat Hussain
+
+ Course BT1CTG1: BSc Computing
+
+ CO452: 	Programming Concepts	  15 credits
+
+ ---- 	 -------------------- 	 ------	 ---- 	 -----
+ Code 	 Module 		Credit	 Mark 	 Grade
+ ---- 	 -------------------- 	 ------	 ---- 	 -----
+
+ CO452: 	Programming Concepts	  15	90
+
+ No Final Course Grade Yet!
+Student student1 = new Student("Rahaat Hussain", 22045458);
+Course computing = new Course("BT1CTG1", "BSc Computing");
+Module co452 = new Module("CO452", "Programming Concepts");
+ModuleMark rahaatMark = new ModuleMark(co452);
+student1.addMark(rahaatMark);
+student1.enrol(computing);
+computing.addModule(co452);
+rahaatMark.setMark(90);
+student1.printTranscript();
+ ------------------------------------
+ App21-02: Exam Board Transcript 2021
+        by student name
+ ------------------------------------
+ Student ID: 22045458, Rahaat Hussain
+
+ Course BT1CTG1: BSc Computing
+
+ CO452: Programming Concepts	  15 credits
+
+ ---- 	 -------------------- 	 ------	 ---- 	 -----
+ Code 	 Module 		Credit	 Mark 	 Grade
+ ---- 	 -------------------- 	 ------	 ---- 	 -----
+
+ CO452: Programming Concepts	  15	90
+
+ No Final Course Grade Yet!
