@@ -104,9 +104,10 @@ public class Student
     
     private void printModules()
     {
-        for(ModuleMark moduleMarks: marks)
+        for(ModuleMark mark: marks)
         {
-            moduleMarks.print();
+            mark.print();
+            System.out.println("\t" + course.convertToGrade(mark.getValue()));
         }
     }
     

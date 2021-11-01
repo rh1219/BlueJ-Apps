@@ -4,7 +4,8 @@
  * students at the completion of their course
  * Each value is the top percentage mark for that grade
  * @author Derek Peacock and Nicholas Day
- * @version 1.0 01/10/2020
+ * Modified by Rahaat Hussain
+ * @version 2.0
  */
 public enum Grades
 {
