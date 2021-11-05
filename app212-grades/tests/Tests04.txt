@@ -1,0 +1,199 @@
+Student student1 = new Student("Rahaat Hussain", 22045458);
+Course computing = new Course("BT1CTG1", "BSc Computing");
+Module co452 = new Module("CO452", "Programming Concepts");
+computing.addModule(co452);
+student1.enrol(computing);
+ModuleMark rahaatMark = new ModuleMark(co452);
+rahaatMark.setMark(68);
+student1.addMark(rahaatMark);
+student1.printTranscript();
+ ------------------------------------
+ App21-02: Exam Board Transcript 2021
+        by student name
+ ------------------------------------
+ Student ID: 22045458, Rahaat Hussain
+
+ Course BT1CTG1: BSc Computing
+
+ CO452: Programming Concepts	  15 credits
+
+ ---- 	 -------------------- 	 ------	 ---- 	 -----
+ Code 	 Module 		Credit	 Mark 	 Grade
+ ---- 	 -------------------- 	 ------	 ---- 	 -----
+
+ CO452: Programming Concepts	  15	68B
+
+
+ Final Course Grade = F
+Module co450 = new Module("CO450", "Computer Architectures");
+computing.addModule(co450);
+ModuleMark rahaatco450Mark = new ModuleMark(co450);
+rahaatco450Mark.setMark(72);
+student1.addMark(rahaatco450Mark);
+student1.printTranscript();
+ ------------------------------------
+ App21-02: Exam Board Transcript 2021
+        by student name
+ ------------------------------------
+ Student ID: 22045458, Rahaat Hussain
+
+ Course BT1CTG1: BSc Computing
+
+ CO452: Programming Concepts	  15 credits
+ CO450: Computer Architectures	  15 credits
+
+ ---- 	 -------------------- 	 ------	 ---- 	 -----
+ Code 	 Module 		Credit	 Mark 	 Grade
+ ---- 	 -------------------- 	 ------	 ---- 	 -----
+
+ CO452: Programming Concepts	  15	68B
+
+ CO450: Computer Architectures	  15	72A
+
+
+ Final Course Grade = F
+Module co461 = new Module("CO461", "3D Modelling");
+computing.addModule(co461);
+ModuleMark rahaatco461Mark = new ModuleMark(co461);
+rahaatco461Mark.setMark(90);
+student1.addMark(rahaatco461Mark);
+student1.printTranscript();
+ ------------------------------------
+ App21-02: Exam Board Transcript 2021
+        by student name
+ ------------------------------------
+ Student ID: 22045458, Rahaat Hussain
+
+ Course BT1CTG1: BSc Computing
+
+ CO452: Programming Concepts	  15 credits
+ CO450: Computer Architectures	  15 credits
+ CO461: 3D Modelling	  15 credits
+
+ ---- 	 -------------------- 	 ------	 ---- 	 -----
+ Code 	 Module 		Credit	 Mark 	 Grade
+ ---- 	 -------------------- 	 ------	 ---- 	 -----
+
+ CO452: Programming Concepts	  15	68B
+
+ CO450: Computer Architectures	  15	72A
+
+ CO461: 3D Modelling	  15	90A
+
+
+ Final Course Grade = C
+Student rahaat = new Student("Rahaat Hussain", 22045458);
+Course computing = new Course("BT1CTG1", "BSc Computing");
+Module co452 = new Module("CO452", "Programming Concepts");
+Module co450 = new Module("CO450", "Computer Architectures");
+Course co454 = new Course("CO454", "Digital Tech...");
+Course co456 = new Course("CO456", "Web Development");
+ModuleMark co452Mark = new ModuleMark(co452);
+ModuleMark co450Mark = new ModuleMark(co450);
+rahaat.enrol(computing);
+Module co454 = new Module("CO454", "Digital Technologies");
+Module co456 = new Module("CO456", "Web Development");
+ModuleMark co454Mark = new ModuleMark(co454);
+ModuleMark co456Mark = new ModuleMark(co456);
+computing.addModule(co452);
+computing.addModule(co450);
+computing.addModule(co454);
+computing.addModule(co456);
+co452Mark.setMark(69);
+co450Mark.setMark(72);
+co454Mark.setMark(59);
+co456Mark.setMark(82);
+rahaat.addMark(co452Mark);
+rahaat.addMark(co450Mark);
+rahaat.addMark(co454Mark);
+rahaat.addMark(co456Mark);
+rahaat.printTranscript();
+ ------------------------------------
+ App21-02: Exam Board Transcript 2021
+        by student name
+ ------------------------------------
+ Student ID: 22045458, Rahaat Hussain
+
+ Course BT1CTG1: BSc Computing
+
+ CO452: Programming Concepts	  15 credits
+ CO450: Computer Architectures	  15 credits
+ CO454: Digital Technologies	  15 credits
+ CO456: Web Development	  15 credits
+
+ ---- 	 -------------------- 	 ------	 ---- 	 -----
+ Code 	 Module 		Credit	 Mark 	 Grade
+ ---- 	 -------------------- 	 ------	 ---- 	 -----
+
+ CO452: Programming Concepts	  15	69	B
+
+ CO450: Computer Architectures	  15	72	A
+
+ CO454: Digital Technologies	  15	59	C
+
+ CO456: Web Development	  15	82	A
+
+
+ Final Course Grade = A
+Course computing = new Course("BT1CTG1", "BSc Computing");
+Student rahaat = new Student("Rahaat Hussain", 22045458);
+rahaat.enrol(computing);
+rahaat.printTranscript();
+ ------------------------------------
+ App21-02: Exam Board Transcript 2021
+        by student name
+ ------------------------------------
+ Student ID: 22045458, Rahaat Hussain
+
+ Course BT1CTG1: BSc Computing
+
+ CO452: Programming Concepts	  15 credits
+ CO450: Computer Architectures	  15 credits
+ CO454: Digital Tech	  15 credits
+ CO456: Web Development	  15 credits
+
+ ---- 	 -------------------- 	 ------	 ---- 	 -----
+ Code 	 Module 		Credit	 Mark 	 Grade
+ ---- 	 -------------------- 	 ------	 ---- 	 -----
+
+ CO452: Programming Concepts	  15	75	A
+
+ CO450: Computer Architectures	  15	65	B
+
+ CO454: Digital Tech	  15	55	C
+
+ CO456: Web Development	  15	45	D
+
+
+ Final Course Grade = B
+Student rahaat = new Student("Rahaat Hussain", 22045458);
+Course computing = new Course("BT1CTG1", "BSc Computing");
+rahaat.enrol(computing);
+rahaat.printTranscript();
+ ------------------------------------
+ App21-02: Exam Board Transcript 2021
+        by student name
+ ------------------------------------
+ Student ID: 22045458, Rahaat Hussain
+
+ Course BT1CTG1: BSc Computing
+
+ CO452: Programming Concepts	  15 credits
+ CO450: Computer Architectures	  15 credits
+ CO454: Digital Tech	  15 credits
+ CO456: Web Development	  15 credits
+
+ ---- 	 -------------------- 	 ------	 ---- 	 -----
+ Code 	 Module 		Credit	 Mark 	 Grade
+ ---- 	 -------------------- 	 ------	 ---- 	 -----
+
+ CO452: Programming Concepts	  0	8	F
+
+ CO450: Computer Architectures	  0	24	F
+
+ CO454: Digital Tech	  15	85	A
+
+ CO456: Web Development	  15	42	D
+
+
+ Final Course Grade = F
