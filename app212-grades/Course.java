@@ -44,7 +44,14 @@ public class Course
      */
     public void createModules()
     {
-
+        Module co452 = new Module("CO452", "Programming Concepts");
+        Module co450 = new Module("CO450", "Computer Architectures");
+        Module co454 = new Module("CO454", "Digital Tech");
+        Module co456 = new Module("CO456", "Web Development");
+        addModule(co452);
+        addModule(co450);
+        addModule(co454);
+        addModule(co456);
     }
     
     public void addModule(Module module)
