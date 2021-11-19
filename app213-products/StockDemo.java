@@ -1,4 +1,4 @@
-
+import java.util.Random;
 /**
  * Demonstrate the StockManager and Product classes.
  * The demonstration becomes properly functional as
@@ -12,15 +12,17 @@ public class StockDemo
 {
     // The stock manager.
     private StockList stock;
+    
+    private Random random;
 
     /**
      * Create a StockManager and populate it with at least
      * 10 sample products.
      */
-    public StockDemo()
+    public StockDemo(StockList stock)
     {
         this.stock = new StockList();
-        
+        this.random = new Random();
         // Add at least 10 products, they must be unique to you
         // Make sure the ids are sequential numbers
         
@@ -29,6 +31,11 @@ public class StockDemo
         stock.add(new Product(13, "iPhone 13"));
         stock.add(new Product(14, "Galaxy Z Fold3"));
         stock.add(new Product(15, "Google Pixel 6"));
+        stock.add(new Product(16, "Oculus Quest 2"));
+        stock.add(new Product(17, "PlayStation VR"));
+        stock.add(new Product(18, "iPad mini"));
+        stock.add(new Product(19, "iPad Air"));
+        stock.add(new Product(20, "MacBook Pro"));
     }
     
     /**
@@ -53,19 +60,17 @@ public class StockDemo
     
     private void buyProducts()
     {
-        stock.buyProduct(11, 50);
-        stock.buyProduct(12, 30);
-        stock.buyProduct(13, 70);
-        stock.buyProduct(14, 60);
-        stock.buyProduct(15, 60);
+        for (int i = 11; i <= 20; i++)
+        {
+            stock.buyProduct(i, random.nextInt(1001));
+        }
     }
 
     private void sellProducts()
     {
-        stock.sellProduct(11, 30);
-        stock.sellProduct(12, 15);
-        stock.sellProduct(13, 20);
-        stock.sellProduct(14, 50);
-        stock.sellProduct(15, 25);
+        for (int i = 11; i <= 20; i++)
+        {
+            stock.sellProduct(i, random.nextInt(1001));
+        }
     }    
 }

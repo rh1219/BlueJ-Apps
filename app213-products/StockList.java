@@ -127,6 +127,13 @@ public class StockList
         }
     }    
 
+    public void search(String phrase)
+    {
+        if(phrase.contains("iPad"));
+        {
+            System.out.println("Here are all items that contain " + phrase);
+        }
+    }
     
     /**
      * Locate a product with the given ID, and return how
@@ -174,7 +181,7 @@ public class StockList
     public void printHeading()
     {
         System.out.println();
-        System.out.println(" Rahaat's Stock List");
+        System.out.println(" Rahaat's Tech");
         System.out.println(" ====================");
         System.out.println();
     }

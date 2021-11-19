@@ -1,0 +1,66 @@
+StockDemo testDemo = new StockDemo();
+testDemo.runDemo();
+
+ Rahaat's Tech
+ ====================
+
+ ID 11: PS5 stock level: 0
+ ID 12: Xbox Series X stock level: 0
+ ID 13: iPhone 13 stock level: 0
+ ID 14: Galaxy Z Fold3 stock level: 0
+ ID 15: Google Pixel 6 stock level: 0
+ ID 16: Oculus Quest 2 stock level: 0
+ ID 17: PlayStation VR stock level: 0
+ ID 18: iPad mini stock level: 0
+ ID 19: iPad Air stock level: 0
+ ID 20: MacBook Pro stock level: 0
+
+Bought 274 of PS5
+Bought 480 of Xbox Series X
+Bought 873 of iPhone 13
+Bought 420 of Galaxy Z Fold3
+Bought 627 of Google Pixel 6
+Bought 824 of Oculus Quest 2
+Bought 212 of PlayStation VR
+Bought 884 of iPad mini
+Bought 1000 of iPad Air
+Bought 97 of MacBook Pro
+
+ Rahaat's Tech
+ ====================
+
+ ID 11: PS5 stock level: 274
+ ID 12: Xbox Series X stock level: 480
+ ID 13: iPhone 13 stock level: 873
+ ID 14: Galaxy Z Fold3 stock level: 420
+ ID 15: Google Pixel 6 stock level: 627
+ ID 16: Oculus Quest 2 stock level: 824
+ ID 17: PlayStation VR stock level: 212
+ ID 18: iPad mini stock level: 884
+ ID 19: iPad Air stock level: 1000
+ ID 20: MacBook Pro stock level: 97
+
+Can't Sell 508 of PS5 because only have 274
+Can't Sell 681 of Xbox Series X because only have 480
+Sold 363 of iPhone 13
+Can't Sell 529 of Galaxy Z Fold3 because only have 420
+Sold 394 of Google Pixel 6
+Sold 279 of Oculus Quest 2
+Can't Sell 564 of PlayStation VR because only have 212
+Sold 647 of iPad mini
+Sold 782 of iPad Air
+Sold 87 of MacBook Pro
+
+ Rahaat's Tech
+ ====================
+
+ ID 11: PS5 stock level: 274
+ ID 12: Xbox Series X stock level: 480
+ ID 13: iPhone 13 stock level: 510
+ ID 14: Galaxy Z Fold3 stock level: 420
+ ID 15: Google Pixel 6 stock level: 233
+ ID 16: Oculus Quest 2 stock level: 545
+ ID 17: PlayStation VR stock level: 212
+ ID 18: iPad mini stock level: 237
+ ID 19: iPad Air stock level: 218
+ ID 20: MacBook Pro stock level: 10
