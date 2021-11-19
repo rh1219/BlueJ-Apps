@@ -1,0 +1,199 @@
+
+Sold 30 of PS5
+Sold 10 of Xbox Series X
+Sold 40 of Xbox Series X
+Sold 20 of Xbox Series X
+
+ Rahaat's Stock List
+ ====================
+
+ ID 11: PS5 stock level: 20
+ ID 12: Xbox Series X stock level: 0
+ ID 13: iPhone 13 stock level: 70
+ ID 14: Galaxy Z Fold3 stock level: 60
+
+rahaatStockDemo.runDemo();
+
+ Rahaat's Stock List
+ ====================
+
+ ID 11: PS5 stock level: 20
+ ID 12: Xbox Series X stock level: 0
+ ID 13: iPhone 13 stock level: 70
+ ID 14: Galaxy Z Fold3 stock level: 60
+
+Bought 50 of PS5
+Bought 30 of Xbox Series X
+Bought 70 of iPhone 13
+Bought 60 of Galaxy Z Fold3
+
+ Rahaat's Stock List
+ ====================
+
+ ID 11: PS5 stock level: 70
+ ID 12: Xbox Series X stock level: 30
+ ID 13: iPhone 13 stock level: 140
+ ID 14: Galaxy Z Fold3 stock level: 120
+
+Sold 30 of PS5
+Sold 10 of Xbox Series X
+Sold 40 of Xbox Series X
+Sold 20 of Xbox Series X
+
+ Rahaat's Stock List
+ ====================
+
+ ID 11: PS5 stock level: 40
+ ID 12: Xbox Series X stock level: 0
+ ID 13: iPhone 13 stock level: 140
+ ID 14: Galaxy Z Fold3 stock level: 120
+
+StockDemo rahaatStockDemo = new StockDemo();
+rahaatStockDemo.runDemo();
+
+ Rahaat's Stock List
+ ====================
+
+ ID 11: PS5 stock level: 0
+ ID 12: Xbox Series X stock level: 0
+ ID 13: iPhone 13 stock level: 0
+ ID 14: Galaxy Z Fold3 stock level: 0
+
+Bought 50 of PS5
+Bought 30 of Xbox Series X
+Bought 70 of iPhone 13
+Bought 60 of Galaxy Z Fold3
+
+ Rahaat's Stock List
+ ====================
+
+ ID 11: PS5 stock level: 50
+ ID 12: Xbox Series X stock level: 30
+ ID 13: iPhone 13 stock level: 70
+ ID 14: Galaxy Z Fold3 stock level: 60
+
+Sold 30 of PS5
+Sold 10 of Xbox Series X
+Sold 40 of Xbox Series X
+Sold 20 of Xbox Series X
+
+ Rahaat's Stock List
+ ====================
+
+ ID 11: PS5 stock level: 20
+ ID 12: Xbox Series X stock level: 0
+ ID 13: iPhone 13 stock level: 70
+ ID 14: Galaxy Z Fold3 stock level: 60
+
+StockDemo rahaatStockDemo = new StockDemo();
+rahaatStockDemo.runDemo();
+
+ Rahaat's Stock List
+ ====================
+
+ ID 11: PS5 stock level: 0
+ ID 12: Xbox Series X stock level: 0
+ ID 13: iPhone 13 stock level: 0
+ ID 14: Galaxy Z Fold3 stock level: 0
+
+Bought 50 of PS5
+Bought 30 of Xbox Series X
+Bought 70 of iPhone 13
+Bought 60 of Galaxy Z Fold3
+
+ Rahaat's Stock List
+ ====================
+
+ ID 11: PS5 stock level: 50
+ ID 12: Xbox Series X stock level: 30
+ ID 13: iPhone 13 stock level: 70
+ ID 14: Galaxy Z Fold3 stock level: 60
+
+Sold 30 of PS5
+Sold 10 of Xbox Series X
+Sold 40 of iPhone 13
+Sold 20 of Galaxy Z Fold3
+
+ Rahaat's Stock List
+ ====================
+
+ ID 11: PS5 stock level: 20
+ ID 12: Xbox Series X stock level: 20
+ ID 13: iPhone 13 stock level: 30
+ ID 14: Galaxy Z Fold3 stock level: 40
+
+StockDemo rahaatStockDemo = new StockDemo();
+StockDemo rahaatTest = new StockDemo();
+rahaatTest.runDemo();
+
+ Rahaat's Stock List
+ ====================
+
+ ID 11: PS5 stock level: 0
+ ID 12: Xbox Series X stock level: 0
+ ID 13: iPhone 13 stock level: 0
+ ID 14: Galaxy Z Fold3 stock level: 0
+
+Bought 50 of PS5
+Bought 30 of Xbox Series X
+Bought 70 of iPhone 13
+Bought 60 of Galaxy Z Fold3
+
+ Rahaat's Stock List
+ ====================
+
+ ID 11: PS5 stock level: 50
+ ID 12: Xbox Series X stock level: 30
+ ID 13: iPhone 13 stock level: 70
+ ID 14: Galaxy Z Fold3 stock level: 60
+
+Sold 30 of PS5
+Sold 100 of Xbox Series X
+Sold 400 of iPhone 13
+Sold 20 of Galaxy Z Fold3
+
+ Rahaat's Stock List
+ ====================
+
+ ID 11: PS5 stock level: 20
+ ID 12: Xbox Series X stock level: 30
+ ID 13: iPhone 13 stock level: 70
+ ID 14: Galaxy Z Fold3 stock level: 40
+
+StockDemo rahaatTest = new StockDemo();
+rahaatTest.runDemo();
+
+ Rahaat's Stock List
+ ====================
+
+ ID 11: PS5 stock level: 0
+ ID 12: Xbox Series X stock level: 0
+ ID 13: iPhone 13 stock level: 0
+ ID 14: Galaxy Z Fold3 stock level: 0
+
+Bought 50 of PS5
+Bought 30 of Xbox Series X
+Bought 70 of iPhone 13
+Bought 60 of Galaxy Z Fold3
+
+ Rahaat's Stock List
+ ====================
+
+ ID 11: PS5 stock level: 50
+ ID 12: Xbox Series X stock level: 30
+ ID 13: iPhone 13 stock level: 70
+ ID 14: Galaxy Z Fold3 stock level: 60
+
+Sold 30 of PS5
+Can't Sell 100 of Xbox Series X because only have 30
+Can't Sell 400 of iPhone 13 because only have 70
+Sold 20 of Galaxy Z Fold3
+
+ Rahaat's Stock List
+ ====================
+
+ ID 11: PS5 stock level: 20
+ ID 12: Xbox Series X stock level: 30
+ ID 13: iPhone 13 stock level: 70
+ ID 14: Galaxy Z Fold3 stock level: 40
+
