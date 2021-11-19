@@ -1,0 +1,42 @@
+StockDemo rahaatDemoTest = new StockDemo();
+rahaatDemoTest.runDemo();
+
+ Rahaat's Stock List
+ ====================
+
+ ID 11: PS5 stock level: 0
+ ID 12: Xbox Series X stock level: 0
+ ID 13: iPhone 13 stock level: 0
+ ID 14: Galaxy Z Fold3 stock level: 0
+ ID 15: Google Pixel 6 stock level: 0
+
+Bought 50 of PS5
+Bought 30 of Xbox Series X
+Bought 70 of iPhone 13
+Bought 60 of Galaxy Z Fold3
+Bought 60 of Google Pixel 6
+
+ Rahaat's Stock List
+ ====================
+
+ ID 11: PS5 stock level: 50
+ ID 12: Xbox Series X stock level: 30
+ ID 13: iPhone 13 stock level: 70
+ ID 14: Galaxy Z Fold3 stock level: 60
+ ID 15: Google Pixel 6 stock level: 60
+
+Sold 30 of PS5
+Sold 15 of Xbox Series X
+Sold 20 of iPhone 13
+Sold 50 of Galaxy Z Fold3
+Sold 25 of Google Pixel 6
+
+ Rahaat's Stock List
+ ====================
+
+ ID 11: PS5 stock level: 20
+ ID 12: Xbox Series X stock level: 15
+ ID 13: iPhone 13 stock level: 50
+ ID 14: Galaxy Z Fold3 stock level: 10
+ ID 15: Google Pixel 6 stock level: 35
+

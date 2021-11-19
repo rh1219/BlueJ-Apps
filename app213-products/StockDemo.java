@@ -28,6 +28,7 @@ public class StockDemo
         stock.add(new Product(12, "Xbox Series X"));
         stock.add(new Product(13, "iPhone 13"));
         stock.add(new Product(14, "Galaxy Z Fold3"));
+        stock.add(new Product(15, "Google Pixel 6"));
     }
     
     /**
@@ -56,13 +57,15 @@ public class StockDemo
         stock.buyProduct(12, 30);
         stock.buyProduct(13, 70);
         stock.buyProduct(14, 60);
+        stock.buyProduct(15, 60);
     }
 
     private void sellProducts()
     {
         stock.sellProduct(11, 30);
-        stock.sellProduct(12, 100);
-        stock.sellProduct(13, 400);
-        stock.sellProduct(14, 20);
+        stock.sellProduct(12, 15);
+        stock.sellProduct(13, 20);
+        stock.sellProduct(14, 50);
+        stock.sellProduct(15, 25);
     }    
 }
