@@ -9,6 +9,9 @@
 public enum CommandWords
 {
     GO   ("go","Exit location in <direction>"),
+    ATTACK ("attack", "Attack the enemy"),
+    DRINKHEALTHPOTION ("drink potion", "Drink health potion"),
+    RUN ("run", "Run from the enemy"),
     TAKE ("take", "Take <item> from location"),
     HELP ("help", "List all available commands"),
     QUIT ("quit", "End the game");

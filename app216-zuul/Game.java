@@ -51,6 +51,15 @@ public class Game
     }
 
     /**
+     * Player Variables
+     */
+    public void playerVariables() 
+    {            
+        int health = 100;
+        int score = 0;
+    }
+    
+    /**
      * Print out the opening message for the player.
      */
     private void printWelcome()

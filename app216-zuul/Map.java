@@ -1,4 +1,4 @@
-
+import java.util.ArrayList;
 /**
  * This class is reponsible for creating and
  * linking all the Locations in the game to
@@ -15,7 +15,7 @@ public class Map
 {
     // Need to add a list of exits
     
-    private Location outside, theater, changingRoom, pub, stockRoom, lab, office, vault;
+    private Location outside, minersBuilding, office, vault, campsite, caveEntrance, miningArea, undergroundLake;
 
     private Location currentLocation;
 
@@ -25,6 +25,9 @@ public class Map
     public Map()
     {
         createLocations();
+        setRequiredItems();
+        
+        ArrayList<Items> inventory = new ArrayList<Items>();
     }
 
     /**
@@ -36,95 +39,40 @@ public class Map
     private void createLocations()
     {
         createOutside();
-        createTheatre();
-        createPub();
+        createMinersBuilding();
         createOffice();
-        createLab();
         createVault();
-
+        createCampsite();
+        createCaveEntrance();
+        createMiningArea();
+        createUndergroundLake();
+        
         currentLocation = outside;  // start game outside
     }
     
     /**
      * Create the outside and link it to the
-     * theatre, lab and pub
+     * miner's building, campsite and cave entrance
      */
     private void createOutside()
     {
-        outside = new Location("outside in the town centre");
-        
-        outside.setExit("east", theater);
-        outside.setExit("south", lab);
-        outside.setExit("west", pub);
+        outside = new Location("outside of the old mining facility");
     }
     
     /**
-     * Create the pub and link it to the outside
+     // * Create the miner's building and link it to the outside
      */
-    private void createPub()
+    private void createMinersBuilding()
     {
-        pub = new Location("in the town pub");
-        
-        pub.setExit("east", outside);
-        outside.setExit("west", pub);
+        minersBuilding = new Location("the old miner's building");
     }
     
     /**
-     * Create the vault and link it to the office
-     */
-    private void createStockRoom()
-    {
-        stockRoom = new Location("in the pub");
-        
-        stockRoom.setExit("north", pub);
-        pub.setExit("south", stockRoom);
-    }
-    
-    /**
-     * Create the theatre linked to the outside
-     */
-    private void createTheatre()
-    {
-        theater = new Location("in the town theatre");
-        
-        theater.setExit("west", outside);
-        outside.setExit("east", theater);
-    }
-    
-    /**
-     * Create the theatre linked to the outside
-     */
-    private void createChangingRoom()
-    {
-        changingRoom = new Location("in the theatre");
-        
-        theater.setExit("west", outside);
-        outside.setExit("east", theater);
-    }
-    
-    /**
-     * Create the office linked to the lab
+     * Create the office and link it to the miner's building
      */
     private void createOffice()
     {
-        office = new Location("in the admin office");
-        
-        office.setExit("west", lab);
-    }
-    
-    /**
-     * Create the lab and link it to the outside and office
-     */
-    private void createLab()
-    {
-        // create the Locations
-        lab = new Location("in a computing lab");
-        
-        lab.setExit("east", office);
-        office.setExit("west", lab);
-        
-        lab.setExit("north", outside);
-        outside.setExit("south", lab);
+        office = new Location("this is the chief miner's office");
     }
     
     /**
@@ -132,10 +80,51 @@ public class Map
      */
     private void createVault()
     {
-        vault = new Location("in the admin office");
-        
-        vault.setExit("north", office);
-        office.setExit("south", vault);
+        vault = new Location("a vault found inside of the chief miner's office, you need a key to enter!");
+    }
+    
+    /**
+     * Create the campsite and link it to the outside
+     */
+    private void createCampsite()
+    {
+        campsite = new Location("this is where the miner's rested after a long day of work");
+    }
+    
+    /**
+     * Create the cave entrance and link it to the outside
+     */
+    private void createCaveEntrance()
+    {
+        caveEntrance = new Location("the entrance to a dark cave, you need a torch to enter!");
+    }
+    
+    /**
+     * Create the mining area and link it to the cave entrance
+     */
+    private void createMiningArea()
+    {
+        // create the Locations
+        miningArea = new Location("this is where the miner's found their treasure");
+    }
+    
+    /**
+     * Create the underground lake and link it to the cave entrance
+     */
+    private void createUndergroundLake()
+    {
+        undergroundLake = new Location("you find a mysterious underground lake, you need a snorkel to enter!");
+    }
+    
+    
+    /**
+     * Set the required items needed to enter certain rooms
+     */
+    private void setRequiredItems()
+    {
+        vault.setRequiredItem(Items.KEY);
+        caveEntrance.setRequiredItem(Items.TORCH);
+        undergroundLake.setRequiredItem(Items.SNORKEL);
     }
     
     public Location getCurrentLocation()
