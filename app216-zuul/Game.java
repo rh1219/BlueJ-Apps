@@ -11,9 +11,9 @@
  *  locations, creates the CommandReader and starts the game.  
  * 
  * @author  Michael Kölling and David J. Barnes
- * @version 2016.02.29
+ * @version 
  * 
- * Modified and extended by Student Name
+ * Modified and extended by Rahaat Hussain
  */
 
 public class Game 
