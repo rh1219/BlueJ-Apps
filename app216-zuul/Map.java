@@ -26,8 +26,6 @@ public class Map
     {
         createLocations();
         setRequiredItems();
-        
-        ArrayList<Items> inventory = new ArrayList<Items>();
     }
 
     /**
@@ -57,6 +55,10 @@ public class Map
     private void createOutside()
     {
         outside = new Location("outside of the old mining facility");
+        
+        outside.setExit("east", caveEntrance);
+        outside.setExit("south", minersBuilding);
+        outside.setExit("west", campsite);
     }
     
     /**
@@ -65,6 +67,8 @@ public class Map
     private void createMinersBuilding()
     {
         minersBuilding = new Location("the old miner's building");
+        
+        minersBuilding.setExit("north", outside);
     }
     
     /**
@@ -73,6 +77,8 @@ public class Map
     private void createOffice()
     {
         office = new Location("this is the chief miner's office");
+        
+        office.setExit("west", minersBuilding);
     }
     
     /**
@@ -81,6 +87,8 @@ public class Map
     private void createVault()
     {
         vault = new Location("a vault found inside of the chief miner's office, you need a key to enter!");
+        
+        vault.setExit("north", office);
     }
     
     /**
@@ -89,6 +97,8 @@ public class Map
     private void createCampsite()
     {
         campsite = new Location("this is where the miner's rested after a long day of work");
+        
+        campsite.setExit("east", outside);
     }
     
     /**
@@ -97,6 +107,10 @@ public class Map
     private void createCaveEntrance()
     {
         caveEntrance = new Location("the entrance to a dark cave, you need a torch to enter!");
+        
+        caveEntrance.setExit("north", miningArea);
+        caveEntrance.setExit("east", undergroundLake);
+        caveEntrance.setExit("west", outside);
     }
     
     /**
@@ -106,6 +120,8 @@ public class Map
     {
         // create the Locations
         miningArea = new Location("this is where the miner's found their treasure");
+        
+        miningArea.setExit("south", caveEntrance);
     }
     
     /**
@@ -114,17 +130,20 @@ public class Map
     private void createUndergroundLake()
     {
         undergroundLake = new Location("you find a mysterious underground lake, you need a snorkel to enter!");
+        
+        undergroundLake.setExit("west", caveEntrance);
     }
-    
     
     /**
      * Set the required items needed to enter certain rooms
      */
-    private void setRequiredItems()
+    private void setRequiredItems(Items)
     {
         vault.setRequiredItem(Items.KEY);
         caveEntrance.setRequiredItem(Items.TORCH);
         undergroundLake.setRequiredItem(Items.SNORKEL);
+        
+        ArrayList<Items> inventory = new ArrayList<Items>();
     }
     
     public Location getCurrentLocation()

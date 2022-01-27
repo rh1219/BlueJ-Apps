@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 /**
  *  This class is the main class of the "World of Zuul" application. 
  *  "World of Zuul" is a very simple, text based adventure game.  Users 
@@ -55,8 +56,9 @@ public class Game
      */
     public void playerVariables() 
     {            
-        int health = 100;
+        int stamina = 100;
         int score = 0;
+        ArrayList<Items> inventory = new ArrayList<Items>();
     }
     
     /**
