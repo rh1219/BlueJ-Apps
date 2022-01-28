@@ -117,7 +117,6 @@ public class Map
      */
     private void createMiningArea()
     {
-        // create the Locations
         miningArea = new Location("this is where the miner's found their treasure");
         
         miningArea.setExit("south", caveEntrance);

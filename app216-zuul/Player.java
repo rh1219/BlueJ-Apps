@@ -32,13 +32,49 @@ public class Player
     }
     
     /**
+     * Checks if player has the torch to enter the cave.
+     */
+    public boolean caveUnlocked() 
+    {            
+        String returnString = " Inventory:";
+        Set <String> torch = inventory.torchSet();
+        for(String item: torch)
+        {
+            returnString += " " + item;
+        }
+        if(returnString.contains("torch"))
+        {
+            return true;
+        }
+        return false;
+    }
+    
+    /**
+     * Checks if player has the snorkel to enter the underground lake.
+     */
+    public boolean lakeUnlocked() 
+    {            
+        String returnString = " Inventory:";
+        Set <String> snorkel = inventory.snorkelSet();
+        for(String item: torch)
+        {
+            returnString += " " + item;
+        }
+        if(returnString.contains("snorkel"))
+        {
+            return true;
+        }
+        return false;
+    }
+    
+    /**
      * Checks if player has key to open vault.
      */
     public boolean vaultUnlocked() 
     {            
         String returnString = " Inventory:";
-        Set <String> keys = inventory.keySet();
-        for(String item: keys)
+        Set <String> key = inventory.keySet();
+        for(String item: key)
         {
             returnString += " " + item;
         }
