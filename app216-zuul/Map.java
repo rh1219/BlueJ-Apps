@@ -3,29 +3,24 @@ import java.util.ArrayList;
  * This class is reponsible for creating and
  * linking all the Locations in the game to
  * form a 2D or 3D network
- *
- *  [Pub]<---->[Outside]<---->[Theatre]
- *                 |
- *          [Computer Lab]<---->[Office]
- *             
+ * 
  * @author Derek Peacock and Nicholas Day
- * @version 2021-08-22
+ * 
+ * Modified By Rahaat Hussain
+ * @version 
  */
 public class Map
 {
     // Need to add a list of exits
-    
     private Location outside, minersBuilding, office, vault, campsite, caveEntrance, miningArea, undergroundLake;
-
+    public boolean inVault = false;
     private Location currentLocation;
-
     /**
      * Constructor for objects of class Map
      */
     public Map()
     {
         createLocations();
-        setRequiredItems();
     }
 
     /**
@@ -69,6 +64,8 @@ public class Map
         minersBuilding = new Location("the old miner's building");
         
         minersBuilding.setExit("north", outside);
+        
+        minersBuilding.setItem(new Item("Torch", "The torch allows you to see inside of the cave"));
     }
     
     /**
@@ -99,6 +96,8 @@ public class Map
         campsite = new Location("this is where the miner's rested after a long day of work");
         
         campsite.setExit("east", outside);
+        
+        campsite.setItem(new Item("Snorkel", "The snorkel allows you to enter undergound lake"));
     }
     
     /**
@@ -132,20 +131,10 @@ public class Map
         undergroundLake = new Location("you find a mysterious underground lake, you need a snorkel to enter!");
         
         undergroundLake.setExit("west", caveEntrance);
-    }
-    
-    /**
-     * Set the required items needed to enter certain rooms
-     */
-    private void setRequiredItems(Items)
-    {
-        vault.setRequiredItem(Items.KEY);
-        caveEntrance.setRequiredItem(Items.TORCH);
-        undergroundLake.setRequiredItem(Items.SNORKEL);
         
-        ArrayList<Items> inventory = new ArrayList<Items>();
+        undergroundLake.setItem(new Item("Key", "The key allows you to enter the vault"));
     }
-    
+
     public Location getCurrentLocation()
     {
         return currentLocation;

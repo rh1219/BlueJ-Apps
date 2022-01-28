@@ -52,25 +52,16 @@ public class Game
     }
 
     /**
-     * Player Variables
-     */
-    public void playerVariables() 
-    {            
-        int stamina = 100;
-        int score = 0;
-        ArrayList<Items> inventory = new ArrayList<Items>();
-    }
-    
-    /**
      * Print out the opening message for the player.
      */
     private void printWelcome()
     {
         System.out.println();
-        System.out.println(" Welcome to the World of Zuul!");
-        System.out.println(" World of Zuul is a new, incredibly boring adventure game.");
+        System.out.println(" Welcome to the abandoned mining facility!");
+        System.out.println(" Make your way through the facility to find the key and obtain the secret treasure.");
         System.out.println(" Type 'help' if you need help.");
         System.out.println();
         System.out.println(MAP.getCurrentLocation().getLongDescription());
+        
     }
 }
