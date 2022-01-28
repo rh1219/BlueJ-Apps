@@ -80,7 +80,7 @@ public class Player
         }
         if(returnString.contains("key"))
         {
-            return true;
+            System.out.println("Well done. You have successfully opened the vault and found the miner's secret treasure! Type 'quit' to close the game.");
         }
         return false;
     }
