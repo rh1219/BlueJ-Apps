@@ -47,8 +47,8 @@ public class InputReader
     }
 
     /**
-     * Read a the next int from standard imput (the text terminal),
-     * and return it as an interger.
+     * Read the next int from standard input (the text terminal),
+     * and return it as an integer.
      *
      * @return Integer typed by user.
      */
