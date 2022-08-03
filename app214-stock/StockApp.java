@@ -30,7 +30,7 @@ public class StockApp
             printHeading();
             printMenuOptions();
 
-            String option = reader.getString("Enter an option > ");
+            String option = reader.getString("Enter an option: ");
 
             finished = executeOption(option.toLowerCase());
         }
