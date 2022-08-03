@@ -1,174 +1,172 @@
 import java.util.ArrayList;
 
 /**
- * Managing stock of a business.
+ * Manage the stock in a business. The stock is described by zero or more Products.
+ *
  * @author Rahaat Hussain
- * @version 0.1
+ * @version 1.0
  */
+
 public class StockList
 {
+    // A list of the products.
     private ArrayList<Product> stock;
 
     /**
-     * Initialise the stock manager.
+     * Initialise stock manager.
      */
+
     public StockList()
     {
         stock = new ArrayList<Product>();
     }
 
     /**
+     * Find a product
+     */
+
+    public Product findProduct(int productId)
+    {
+        for(Product product : stock)
+        {
+            if(product.getID() == productId)
+            {
+                return product;
+            }
+        }
+        return null;
+    }
+
+
+    /**
      * Add a product to the list.
      */
-    public void add(Product item)
+
+    public void addProduct(Product item)
     {
-        stock.add(item);
+        if (findProduct(item.getID()) != null)
+        {
+            System.out.println("Product already exists under this ID, try again.");
+        }
+
+        else
+        {
+            stock.add(item);
+        }
     }
 
     /**
-     * A method to buy a single copy of the product
+     * Remove a Product from stock
      */
-    public void buyProduct(int productID)
-    {
-        buyProduct(productID, 1);
-    }
 
-
-    /**
-     * Buy a quantity of a product.
-     * Increase the quantity of the product by the given amount.
-     */
-    public void buyProduct(int productID, int amount)
+    public void removeProduct(int productId)
     {
-        Product product = findProduct(productID);
+        Product product = findProduct(productId);
         if(product != null)
         {
-            if(product.getQuantity() < 1000)
+            stock.remove(product);
+        }
+        else
+        {
+            System.out.println("The Product can’t be found, try again.");
+        }
+    }
+
+    /**
+     * Buy a quantity of a specific product
+     */
+
+    public void buyProduct(int productId, int productQuantity)
+    {
+        Product product = findProduct(productId);
+        if(product != null)
+        {
+            if(product.getQuantity() < 500)
             {
-                product.increaseQuantity(amount);
-                System.out.println("Bought " + (amount) + " of "  + product.getName());
+                product.increaseQuantity(productQuantity);
+                System.out.println("Bought " + productQuantity + " of Product: " + product.getName());
             }
-            else
+            else if(product.getQuantity() > 500)
             {
-                System.out.println(product.getName() + "should be sold before buying more");
+                System.out.println("Unable to buy " + productQuantity + " of "
+                        + product + " because it exceeds 500");
             }
         }
         else
         {
-            System.out.println("The product could not be found");
+            System.out.println("Can’t find product");
         }
     }
 
     /**
-     * Find a product to match the product id
+     * Sell a quantity of a specific product
      */
-    public Product findProduct(int productID)
-    {
-        for(Product product : stock)
-        {
-            if(product.getID() == productID)
-                return product;
-        }
 
-        return null;
+    public void sellProduct(int productId, int productQuantity)
+    {
+        Product product = findProduct(productId);
+        if(product != null)
+        {
+            if(product.getQuantity() > 0 && product.getQuantity() >= productQuantity)
+            {
+                product.decreaseQuantity(productQuantity);
+                System.out.println("Sold " + productQuantity + " of Product: " + product.getName());
+            }
+            else if(product.getQuantity() < productQuantity)
+            {
+                System.out.println("Unable to sell " + productQuantity + " of "
+                        + product + " because it is more than the stock level of "
+                        + product.getQuantity());
+            }
+            else
+            {
+                System.out.println("The product: " + product.getName() +
+                        " is out of stock");
+            }
+        }
+        else
+        {
+            System.out.println("Can’t find product");
+        }
     }
 
     /**
-     * Find a product to match the product name
+     * Search for Product by a phrase
      */
-    public Product findName(String productName)
+
+    public void searchProduct (String phrase)
     {
+        int count = 0;
         for(Product product : stock)
         {
-            if(product.getName() == productName)
+            if(product.getName().contains(phrase))
+            {
                 System.out.println(product);
-        }
-
-        return null;
-    }
-
-    /**
-     * Removes a product
-     */
-    public void removeProducts(int productID)
-    {
-        Product product = findProduct(productID);
-        stock.remove(product);
-    }
-
-
-    /**
-     * Checks the stock based on the productID
-     * that is entered.
-     */
-    public void checkstockProducts(int productID)
-    {
-        for(Product product : stock)
-        {
-            if(product.getQuantity() <100)
-                System.out.println( "This product " + product + " has less than 100 copies left");
-        }
-    }
-
-
-    /**
-     * Sell one of the given product.
-     * Show the before and after status of the product.
-     */
-    public void sellProduct(int productID)
-    {
-        sellProduct(productID, 1);
-    }
-
-    /**
-     * Sell a number of the given product.
-     * Show the before and after status of the product.
-     */
-    public void sellProduct(int productID, int amount)
-    {
-        Product product = findProduct(productID);
-
-        if(product != null)
-        {
-            if(product.getQuantity() > 0 && product.getQuantity() > amount)
-            {
-                product.decreaseQuantity(amount);
-                System.out.println("Sold " + (amount) + " copies of "  + product.getName());
-            }
-            else if(product.getQuantity() == 0)
-            {
-                System.out.println(product.getName() + "is out of stock!");
+                count += 1;
             }
             else
             {
-                System.out.println(product.getName() + " cannot be sold because you only have  " + product.getQuantity());
+                System.out.println("Not found");
             }
-        }
-        else
-        {
-            System.out.println("The product could not be found");
+            System.out.println("The search returned " + count + " items");
         }
     }
-
-
     /**
-     * Locate product with the given ID, and return how
-     * many of this item are in stock. If the ID does not
-     * match any product, return zero.
+     * Locate a product with the given ID and print stock level
      */
-    public int numberInStock(int productID)
+
+    public int numberInStock(int productId)
     {
         return 0;
     }
 
     /**
-     * Print details of the given product. If found,
-     * name and stock quantity will be shown.
+     * Print details of a specified product.
      */
-    public void printProduct(int productID)
-    {
-        Product product = findProduct(productID);
 
+    public void printProduct(int productId)
+    {
+        Product product = findProduct(productId);
         if(product != null)
         {
             System.out.println(product.toString());
@@ -176,13 +174,12 @@ public class StockList
     }
 
     /**
-     * Print out each product in the stock
-     * in order
+     * Print out each product in stock
      */
-    public void print()
+
+    public void printAllStock()
     {
         printHeading();
-
         for(Product product : stock)
         {
             System.out.println(product);
@@ -192,13 +189,52 @@ public class StockList
     }
 
     /**
-     * Print out the heading
+     * Print a list of products where the stock level is low
      */
+
+    public void printLowStock()
+    {
+        printLowStockHeading();
+        for(Product product : stock)
+        {
+            if(product.getQuantity() <= 5)
+            {
+                System.out.println(product);
+            }
+        }
+        System.out.println();
+    }
+
+    /**
+     * Automatically restocks all products where stock level is low
+     */
+
+    public void restock()
+    {
+        for(Product product : stock)
+        {
+            if(product.getQuantity() <= 5)
+            {
+                product.setQuantity(6);
+                System.out.println("Product " +product.getID() + " : " + product.getName() + " restocked");
+            }
+        }
+
+        System.out.println();
+    }
+
+    /**
+     * Print out a Heading for the Stock List
+     */
+
     public void printHeading()
     {
         System.out.println();
-        System.out.println(" Rahaat's Stock List");
-        System.out.println(" ====================");
+        System.out.println(" ======================");
+        System.out.println("  Rahaat’s Stock List");
+        System.out.println(" ======================");
         System.out.println();
+
+
     }
 }
